@@ -80,9 +80,9 @@ favicon = "/favicon.svg"
   enableOnPosts = true
   [params.comments.giscus]
     repo = "Ne0tea/Ne0tea.github.io"
-    repoID = "REPLACE_WITH_REPO_ID"
+    repoID = "R_kgDOUyZR7Q"
     category = "Announcements"
-    categoryID = "REPLACE_WITH_CATEGORY_ID"
+    categoryID = "DIC_kwDOUyZR7c4DGpvw"
     mapping = "pathname"
     strict = "0"
     reactionsEnabled = "1"
