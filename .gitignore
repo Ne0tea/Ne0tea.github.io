@@ -1,0 +1,34 @@
+# Build output
+public/
+resources/_gen/
+.hugo_build.lock
+.hugo_cache/
+
+# Local Hugo binary
+hugo
+hugo.exe
+hugo.tar.gz
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Editor
+.vscode/
+.idea/
+*.iml
+
+# Node
+node_modules/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Local config overrides
+config/_local.*
+
+# Sensitive local notes
+*.local.*

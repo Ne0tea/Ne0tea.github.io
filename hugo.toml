@@ -1,0 +1,277 @@
+baseURL = "https://Ne0tea.github.io/"
+defaultContentLanguage = "zh-cn"
+defaultContentLanguageInSubdir = false
+disableLanguages = []
+enableRobotsTXT = true
+paginate = 10
+theme = "hugo-theme-stack"
+
+# Pluralization is not used currently (no Portuguese here).
+ignoreErrors = ["error-remote-getjson"]
+
+# Markers for syntax highlighting via Chroma (also requires pygmentsClasses)
+enableInlineShortcodes = false
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML"]
+
+[params]
+  env = "production"
+  description = "Kai (黄毓杰) · PhD @ Wu Lab · 个人学术主页 / Academic Homepage"
+  keywords = ["Kai", "黄毓杰", "PhD", "Wu Lab", "biology", "research", "bioinformatics"]
+  author = "Kai · 黄毓杰"
+  [params.dateFormat]
+    published = "2006-01-02"
+    lastUpdated = "2006-01-02"
+  defaultImage = "images/og-default.png"
+  ShowShareButtons = true
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  disableSpecial1stPost = false
+  mainSections = ["posts", "publications", "literature"]
+  ShowBackToTop = true
+  ShowBreadCrumbs = true
+  ShowLastMod = true
+  # Math via KaTeX (Stack ships with built-in renderer)
+  article.math = true
+  # Display sections on homepage as Stack cards
+  homeContent = true
+
+  # Sidebar profile header (avatar + subtitle)
+  [params.sidebar]
+    avatar = "/images/avatar.jpg"
+    subtitle = "PhD @ Wu Lab · 浙大"
+
+# Color scheme
+[params.colorScheme]
+  toggle = true
+  default = "auto"
+
+# Sidebar widgets below the profile header
+[[params.sidebarWidgets]]
+  type = "search"
+  weight = 1
+
+[[params.sidebarWidgets]]
+  type = "archives"
+  weight = 2
+
+[[params.sidebarWidgets]]
+  type = "categories"
+  weight = 3
+
+[[params.sidebarWidgets]]
+  type = "tag-cloud"
+  weight = 4
+
+favicon = "/favicon.svg"
+
+# Search (Stack uses Fuse.js built-in)
+[params.search]
+  enable = true
+  type = "fuse"
+
+[params.comments]
+  enable = true
+  # Set to true for posts only, false disables globally
+  enableOnPosts = true
+  [params.comments.giscus]
+    repo = "Ne0tea/Ne0tea.github.io"
+    repoID = "REPLACE_WITH_REPO_ID"
+    category = "Announcements"
+    categoryID = "REPLACE_WITH_CATEGORY_ID"
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    lightTheme = "light"
+    darkTheme = "dark_dimmed"
+    lang = "zh-CN"
+    loading = "lazy"
+
+# External social links are added via [languages.*.menu.social] below (Stack reads these
+# to render icons in the sidebar). Do NOT use a [params.social] table here.
+
+[params.opengraph]
+  [params.opengraph.twitter]
+    site = "Ne0tea"
+    card = "summary_large_image"
+
+# Markup: Goldmark with KaTeX passthrough + Chroma highlight + heading anchors + TOC
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      extension = []
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        delimiters.block = [['$$', '$$'], ['\\[', '\\]']]
+        delimiters.inline = [['$', '$'], ['\\(', '\\)']]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    anchorStyle = "github"
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    noHl = false
+    style = "github-dark"
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+
+# Media type for math SVG handling
+[mediaTypes]
+  [mediaTypes."application/javascript"]
+    suffixes = ["js"]
+
+# Front matter defaults per section
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
+  publishdate = ["publishDate", "date"]
+
+# -----------------------------------------------------------------------------
+# Languages
+# -----------------------------------------------------------------------------
+
+[languages.zh-cn]
+  label = "中文"
+  weight = 1
+  title = "Kai · 黄毓杰"
+  description = "黄毓杰 (Kai), PhD @ Wu Lab. 科研 / 思考 / 文献讨论。"
+  direction = "ltr"
+  contentDir = "content"
+  [languages.zh-cn.params]
+    description = "黄毓杰 (Kai) · PhD @ Wu Lab · 个人学术主页"
+
+[languages.en]
+  label = "English"
+  weight = 2
+  title = "Kai · Huang Yujie"
+  description = "Kai (Huang Yujie), PhD @ Wu Lab. Research / Thoughts / Literature."
+  direction = "ltr"
+  contentDir = "content/en"
+  [languages.en.params]
+    description = "Kai (Huang Yujie) · PhD @ Wu Lab · Academic Homepage"
+
+# -----------------------------------------------------------------------------
+# Menus (Stack requires both mainMenu and social)
+# -----------------------------------------------------------------------------
+
+[[languages.zh-cn.menu.main]]
+  identifier = "home"
+  name = "首页"
+  url = "/"
+  weight = 1
+
+[[languages.zh-cn.menu.main]]
+  identifier = "posts"
+  name = "杂谈"
+  url = "/posts/"
+  weight = 2
+
+[[languages.zh-cn.menu.main]]
+  identifier = "publications"
+  name = "科研成果"
+  url = "/publications/"
+  weight = 3
+
+[[languages.zh-cn.menu.main]]
+  identifier = "literature"
+  name = "文献讨论"
+  url = "/literature/"
+  weight = 4
+
+[[languages.zh-cn.menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
+  weight = 5
+
+[[languages.en.menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[languages.en.menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
+
+[[languages.en.menu.main]]
+  identifier = "publications"
+  name = "Publications"
+  url = "/publications/"
+  weight = 3
+
+[[languages.en.menu.main]]
+  identifier = "literature"
+  name = "Literature"
+  url = "/literature/"
+  weight = 4
+
+[[languages.en.menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 5
+
+# Social icons in sidebar (Stack uses these to render brand icons next to the avatar)
+[[languages.zh-cn.menu.social]]
+  identifier = "github"
+  name = "GitHub"
+  url = "https://github.com/Ne0tea"
+  params.icon = "brand-github"
+  params.newTab = true
+  weight = 1
+
+[[languages.zh-cn.menu.social]]
+  identifier = "orcid"
+  name = "ORCID"
+  url = "https://orcid.org/0000-0002-7310-6178"
+  params.icon = "brand-orcid"
+  params.newTab = true
+  weight = 2
+
+[[languages.zh-cn.menu.social]]
+  identifier = "email"
+  name = "Email"
+  url = "mailto:yujiehuang@zju.edu.cn"
+  params.icon = "mail"
+  params.newTab = false
+  weight = 3
+
+[[languages.en.menu.social]]
+  identifier = "github"
+  name = "GitHub"
+  url = "https://github.com/Ne0tea"
+  params.icon = "brand-github"
+  params.newTab = true
+  weight = 1
+
+[[languages.en.menu.social]]
+  identifier = "orcid"
+  name = "ORCID"
+  url = "https://orcid.org/0000-0002-7310-6178"
+  params.icon = "brand-orcid"
+  params.newTab = true
+  weight = 2
+
+[[languages.en.menu.social]]
+  identifier = "email"
+  name = "Email"
+  url = "mailto:yujiehuang@zju.edu.cn"
+  params.icon = "mail"
+  params.newTab = false
+  weight = 3
