@@ -1,26 +1,29 @@
 {{/*
   Usage: {{< email-subscribe >}}
-  Outputs an email subscribe box. By default uses a placeholder RSS link
-  pointing to the section RSS feed. Replace the embed block with your
-  Follow.it / Mailchimp / Brevo widget code after signing up.
+  Email subscribe box. Embeds the Follow.it widget if its code is pasted
+  below; otherwise shows a placeholder. Always shows RSS fallback links
+  for technical readers.
 */}}
 
 {{ $rssMain := cond (eq .Site.Language.Lang "zh-cn") "/zh-cn/index.xml" "/index.xml" }}
 {{ $rssPubs := cond (eq .Site.Language.Lang "zh-cn") "/zh-cn/publications/index.xml" "/publications/index.xml" }}
 {{ $rssPosts := cond (eq .Site.Language.Lang "zh-cn") "/zh-cn/posts/index.xml" "/posts/index.xml" }}
 
-<div class="email-subscribe">
+<div class="email-subscribe" id="email-subscribe">
   <h3>{{ T "emailSubscribeTitle" }}</h3>
   <p>{{ T "emailSubscribeDesc" }}</p>
 
-  <!-- BEGIN: 3rd-party widget placeholder (Follow.it / Mailchimp / Brevo) -->
-  <!-- Replace this comment block with the embed code from your provider.  -->
-  <!-- Default feed URL: {{ printf "https://%s%s" .Site.Params.canonicalHost | default .Site.BaseURL | default "https://Ne0tea.github.io" }}{{ $rssMain }} -->
+  <!-- BEGIN: Follow.it widget embed -->
+  <!-- Paste your Follow.it embed code here, replacing this comment block. -->
   <!--
   <div class="followit-widget" data-feed-id="YOUR_FEED_ID"></div>
-  <script async src="https://follow.it/widget?r=YOUR_FEED_URL"></script>
+  <script async src="https://follow.it/widget?r=https%3A%2F%2FNe0tea.github.io%2Findex.xml"></script>
   -->
-  <!-- END: placeholder -->
+  <!-- END: Follow.it widget embed -->
+
+  <p class="followit-brand">
+    <img src="/images/follow.png" alt="Powered by Follow.it" height="20" />
+  </p>
 
   <p class="rss-fallback">
     {{ T "emailSubscribeRss" | default "Prefer RSS?" }}
@@ -42,4 +45,6 @@
 }
 .email-subscribe h3 { margin-top: 0; }
 .email-subscribe .rss-fallback { font-size: 0.9em; opacity: 0.8; }
+.email-subscribe .followit-brand { margin: 0.5rem 0; opacity: 0.75; }
+.email-subscribe .followit-brand img { vertical-align: middle; }
 </style>
