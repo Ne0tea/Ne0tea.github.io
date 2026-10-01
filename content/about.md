@@ -52,6 +52,4 @@ Welcome to my academic homepage. Here you will find my research output, reflecti
 
 Feel free to reach out via email for collaboration, literature exchange, or methodological questions.
 
-## Stay updated
-
-{{< email-subscribe >}}
+Click the **Email Updates** button at the bottom-right of any page to subscribe by email or RSS.

@@ -1,25 +1,26 @@
 {{/*
-  Usage: {{< email-subscribe >}}
-  Renders a button that opens a modal dialog containing the Follow.it widget
-  and RSS fallback links. Place the shortcode wherever you want the trigger
-  button to appear; the dialog itself is appended next to the button.
+  Global partial: floating Subscribe button + modal dialog.
+  Include once from baseof.html so every page has it.
+
+  The dialog contains:
+    - Follow.it subscribe form
+    - RSS fallback links (main / publications / posts) per language
 */}}
 
-{{ $uid := printf "rss-modal-%d" .Ordinal }}
 {{ $rssMain := cond (eq .Site.Language.Lang "zh-cn") "/zh-cn/index.xml" "/index.xml" }}
 {{ $rssPubs := cond (eq .Site.Language.Lang "zh-cn") "/zh-cn/publications/index.xml" "/publications/index.xml" }}
 {{ $rssPosts := cond (eq .Site.Language.Lang "zh-cn") "/zh-cn/posts/index.xml" "/posts/index.xml" }}
 
-<button type="button" class="rss-button" onclick="document.getElementById('{{ $uid }}').showModal()" aria-haspopup="dialog">
-  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<button type="button" class="rss-fab" onclick="document.getElementById('rss-modal-global').showModal()" aria-label="{{ T `emailSubscribeTitle` }}" title="{{ T `emailSubscribeTitle` }}">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     <path d="M4 11a9 9 0 0 1 9 9"/>
     <path d="M4 4a16 16 0 0 1 16 16"/>
     <circle cx="5" cy="19" r="1.5" fill="currentColor" stroke="none"/>
   </svg>
-  <span>{{ T "emailSubscribeTitle" }}</span>
+  <span class="rss-fab-label">{{ T "emailSubscribeTitle" }}</span>
 </button>
 
-<dialog id="{{ $uid }}" class="rss-modal">
+<dialog id="rss-modal-global" class="rss-modal">
   <article>
     <header class="rss-modal-header">
       <h3>{{ T "emailSubscribeTitle" }}</h3>
@@ -92,23 +93,32 @@
 </dialog>
 
 <style>
-.rss-button {
+.rss-fab {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 40;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.55rem 1.1rem;
+  padding: 0.6rem 1rem;
   border-radius: 999px;
   border: 1px solid var(--card-border-color, #e5e7eb);
-  background: var(--card-background, #fafafa);
+  background: var(--card-background, #fff);
   color: var(--body-color, inherit);
   font: inherit;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.15s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 0.15s ease, background-color 0.15s ease;
 }
-.rss-button:hover { background: var(--accent-color, #f1f5f9); }
-.rss-button:active { transform: scale(0.97); }
-.rss-button svg { flex: 0 0 18px; }
+.rss-fab:hover { background: var(--accent-color, #f1f5f9); }
+.rss-fab:active { transform: scale(0.97); }
+.rss-fab svg { flex: 0 0 22px; }
+@media (max-width: 480px) {
+  .rss-fab-label { display: none; }
+  .rss-fab { padding: 0.6rem; }
+}
 
 dialog.rss-modal {
   width: min(560px, 92vw);

@@ -245,20 +245,12 @@ favicon = "/favicon.svg"
   weight = 2
 
 [[languages.zh-cn.menu.social]]
-  identifier = "follow"
-  name = "邮件订阅"
-  url = "/zh-cn/about/#email-subscribe"
-  params.icon = "followit"
-  params.newTab = false
-  weight = 3
-
-[[languages.zh-cn.menu.social]]
   identifier = "email"
   name = "Email"
   url = "mailto:yujiehuang@zju.edu.cn"
   params.icon = "mail"
   params.newTab = false
-  weight = 4
+  weight = 3
 
 [[languages.en.menu.social]]
   identifier = "github"
@@ -277,17 +269,9 @@ favicon = "/favicon.svg"
   weight = 2
 
 [[languages.en.menu.social]]
-  identifier = "follow"
-  name = "Follow by Email"
-  url = "/about/#email-subscribe"
-  params.icon = "followit"
-  params.newTab = false
-  weight = 3
-
-[[languages.en.menu.social]]
   identifier = "email"
   name = "Email"
   url = "mailto:yujiehuang@zju.edu.cn"
   params.icon = "mail"
   params.newTab = false
-  weight = 4
+  weight = 3
