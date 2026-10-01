@@ -1,0 +1,45 @@
+{{/*
+  Usage: {{< email-subscribe >}}
+  Outputs an email subscribe box. By default uses a placeholder RSS link
+  pointing to the section RSS feed. Replace the embed block with your
+  Follow.it / Mailchimp / Brevo widget code after signing up.
+*/}}
+
+{{ $rssMain := cond (eq .Site.Language.Lang "zh-cn") "/zh-cn/index.xml" "/index.xml" }}
+{{ $rssPubs := cond (eq .Site.Language.Lang "zh-cn") "/zh-cn/publications/index.xml" "/publications/index.xml" }}
+{{ $rssPosts := cond (eq .Site.Language.Lang "zh-cn") "/zh-cn/posts/index.xml" "/posts/index.xml" }}
+
+<div class="email-subscribe">
+  <h3>{{ T "emailSubscribeTitle" }}</h3>
+  <p>{{ T "emailSubscribeDesc" }}</p>
+
+  <!-- BEGIN: 3rd-party widget placeholder (Follow.it / Mailchimp / Brevo) -->
+  <!-- Replace this comment block with the embed code from your provider.  -->
+  <!-- Default feed URL: {{ printf "https://%s%s" .Site.Params.canonicalHost | default .Site.BaseURL | default "https://Ne0tea.github.io" }}{{ $rssMain }} -->
+  <!--
+  <div class="followit-widget" data-feed-id="YOUR_FEED_ID"></div>
+  <script async src="https://follow.it/widget?r=YOUR_FEED_URL"></script>
+  -->
+  <!-- END: placeholder -->
+
+  <p class="rss-fallback">
+    {{ T "emailSubscribeRss" | default "Prefer RSS?" }}
+    <a href="{{ $rssMain }}" type="application/rss+xml">{{ T "emailSubscribeRssMain" | default "RSS feed" }}</a>
+    ·
+    <a href="{{ $rssPubs }}" type="application/rss+xml">{{ T "emailSubscribeRssPubs" | default "Publications" }}</a>
+    ·
+    <a href="{{ $rssPosts }}" type="application/rss+xml">{{ T "emailSubscribeRssPosts" | default "Posts" }}</a>
+  </p>
+</div>
+
+<style>
+.email-subscribe {
+  border: 1px solid var(--card-border-color, #e5e7eb);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  background: var(--card-background, #fafafa);
+}
+.email-subscribe h3 { margin-top: 0; }
+.email-subscribe .rss-fallback { font-size: 0.9em; opacity: 0.8; }
+</style>

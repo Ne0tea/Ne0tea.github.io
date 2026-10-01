@@ -1,0 +1,12 @@
+[emailSubscribeTitle]
+  other = "Email Updates"
+[emailSubscribeDesc]
+  other = "Get notified by email when a new post or publication appears."
+[emailSubscribeRss]
+  other = "Prefer RSS?"
+[emailSubscribeRssMain]
+  other = "RSS feed"
+[emailSubscribeRssPubs]
+  other = "Publications"
+[emailSubscribeRssPosts]
+  other = "Posts"

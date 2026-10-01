@@ -1,0 +1,12 @@
+[emailSubscribeTitle]
+  other = "邮件订阅"
+[emailSubscribeDesc]
+  other = "新文章 / 新论文发布时通过邮件通知你。"
+[emailSubscribeRss]
+  other = "也可以通过 RSS 订阅："
+[emailSubscribeRssMain]
+  other = "主页 RSS"
+[emailSubscribeRssPubs]
+  other = "论文"
+[emailSubscribeRssPosts]
+  other = "杂谈"
