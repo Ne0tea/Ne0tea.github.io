@@ -3,7 +3,7 @@ title: "RIFinder reveals widespread adaptive remote introgression in grass genom
 date: 2026-02-09
 lastmod: 2026-02-09
 draft: false
-summary: "开发遗传渗入检测软件 RIFinder，并系统定量禾本科中的远程遗传渗入，提出渗入在物种适应性演化中的关键作用。"
+summary: "Introduces RIFinder, a new tool for detecting introgression, and uses it to systematically quantify remote introgression across grass genomes."
 authors: ["Yujie Huang", "Co-authors", "Longjiang Fan"]
 publication: "Plant Communications"
 publication_short: "Plant Commun"
@@ -15,7 +15,7 @@ code: "https://github.com/Ne0tea/RIFinder"
 bibtex: ""
 image: ""
 abstract: |
-  远程遗传渗入 (remote introgression) 是物种适应性演化的重要来源，但目前缺乏稳健且通用的检测方法。本研究新开发了一个遗传渗入检测软件 RIFinder，并系统定量了禾本科中的远程遗传渗入；通过两个具体案例，提出了遗传渗入在物种适应性演化中的关键作用，为现有系统发育结构提供了新的见解。
+  Remote introgression is an important source of adaptive evolution, yet robust and general-purpose detection remains challenging. We present RIFinder, a new software for detecting introgression, and use it to systematically quantify remote introgression across grass genomes. Through two case studies we highlight the role of introgression in adaptive evolution and provide new insights into the established phylogenetic framework.
 tags: ["RIFinder", "introgression", "grass", "phylogenomics", "software"]
 categories: ["publications"]
 math: false
@@ -28,9 +28,9 @@ author_note: "First author"
 
 ## Abstract
 
-Remote introgression is an important source of adaptive evolution, yet robust and general-purpose detection remains challenging. We present **RIFinder**, a new software for detecting introgression, and use it to systematically quantify remote introgression across grass genomes. Through two case studies we highlight the role of introgression in adaptive evolution and provide new insights into the established phylogenetic framework.
+We present **RIFinder**, a new software for detecting introgression, and use it to systematically quantify remote introgression across grass genomes. Through two case studies we highlight the role of introgression in adaptive evolution and provide new insights into the established phylogenetic framework.
 
 ## Links
 
 - Code: <https://github.com/Ne0tea/RIFinder>
-- DOI: "10.1016/j.xplc.2025.101658"
+- DOI: *TBD*

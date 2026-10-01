@@ -1,5 +1,5 @@
 baseURL = "https://Ne0tea.github.io/"
-defaultContentLanguage = "zh-cn"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 disableLanguages = []
 enableRobotsTXT = true
@@ -43,7 +43,7 @@ enableInlineShortcodes = false
   # Sidebar profile header (avatar + subtitle)
   [params.sidebar]
     avatar = "/images/avatar.jpg"
-    subtitle = "PhD @ Wu Lab · 浙大"
+    subtitle = "PhD @ Wu Lab"
 
 # Color scheme
 [params.colorScheme]
@@ -143,25 +143,25 @@ favicon = "/favicon.svg"
 # Languages
 # -----------------------------------------------------------------------------
 
-[languages.zh-cn]
-  label = "中文"
-  weight = 1
-  title = "Kai · 黄毓杰"
-  description = "黄毓杰 (Kai), PhD @ Wu Lab. 科研 / 思考 / 文献讨论。"
-  direction = "ltr"
-  contentDir = "content"
-  [languages.zh-cn.params]
-    description = "黄毓杰 (Kai) · PhD @ Wu Lab · 个人学术主页"
-
 [languages.en]
   label = "English"
-  weight = 2
-  title = "Kai · Huang Yujie"
-  description = "Kai (Huang Yujie), PhD @ Wu Lab. Research / Thoughts / Literature."
+  weight = 1
+  title = "Kai (黄毓杰)"
+  description = "Kai (黄毓杰), PhD @ Wu Lab. Research / Thoughts / Literature."
   direction = "ltr"
-  contentDir = "content/en"
+  contentDir = "content"
   [languages.en.params]
-    description = "Kai (Huang Yujie) · PhD @ Wu Lab · Academic Homepage"
+    description = "Kai (黄毓杰) · PhD @ Wu Lab · Academic Homepage"
+
+[languages.zh-cn]
+  label = "中文"
+  weight = 2
+  title = "黄毓杰 (Kai)"
+  description = "黄毓杰 (Kai), PhD @ Wu Lab. 科研 / 思考 / 文献讨论。"
+  direction = "ltr"
+  contentDir = "content/zh-cn"
+  [languages.zh-cn.params]
+    description = "黄毓杰 (Kai) · PhD @ Wu Lab · 个人学术主页"
 
 # -----------------------------------------------------------------------------
 # Menus (Stack requires both mainMenu and social)
