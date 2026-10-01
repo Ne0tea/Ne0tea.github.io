@@ -1,15 +1,15 @@
 ---
 title: "A reference genome of Commelinales provides insights into the commelinids evolution and global spread of water hyacinth (Pontederia crassipes)"
-date: 2025-01-01
-lastmod: 2025-01-01
+date: 2024-01-01
+lastmod: 2024-01-01
 draft: false
 summary: "提供鸭跖草目 (Commelinales) 参考基因组，为鸭跖草类单子叶植物演化以及凤眼莲的全球扩散提供新见解。"
 authors: ["Yujie Huang", "Co-authors", "Longjiang Fan"]
 publication: "GigaScience"
 publication_short: "GigaScience"
-publish_date: ""
-year: 2025
-doi: ""
+publish_date: "2024-01-01"
+year: 2024
+doi: "10.1093/gigascience/giae006"
 pdf: ""
 code: ""
 bibtex: ""
@@ -32,4 +32,4 @@ We present a reference genome for Commelinales, shedding light on the evolution 
 
 ## Links
 
-- DOI: *TBD*
+- DOI: "10.1093/gigascience/giae006"

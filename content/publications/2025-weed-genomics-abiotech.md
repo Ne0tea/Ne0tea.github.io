@@ -1,15 +1,15 @@
 ---
 title: "Weed genomics: yielding insights into the genetics of weedy traits for crop improvement"
-date: 2025-01-01
-lastmod: 2025-01-01
+date: 2023-03-01
+lastmod: 2023-03-01
 draft: false
 summary: "综述杂草基因组学的研究进展，讨论杂草性状遗传基础对作物改良的启示。"
 authors: ["Yujie Huang", "Co-authors", "Longjiang Fan"]
 publication: "aBIOTECH"
 publication_short: "aBIOTECH"
-publish_date: ""
-year: 2025
-doi: ""
+publish_date: "2023-03"
+year: 2023
+doi: "10.1007/s42994-022-00090-5"
 pdf: ""
 code: ""
 bibtex: ""
@@ -32,4 +32,4 @@ We review recent advances in weed genomics and discuss how the genetics of weedy
 
 ## Links
 
-- DOI: *TBD*
+- DOI: "10.1007/s42994-022-00090-5"

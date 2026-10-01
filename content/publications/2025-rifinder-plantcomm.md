@@ -1,15 +1,15 @@
 ---
 title: "RIFinder reveals widespread adaptive remote introgression in grass genomes"
-date: 2025-01-01
-lastmod: 2025-01-01
+date: 2026-02-09
+lastmod: 2026-02-09
 draft: false
 summary: "开发遗传渗入检测软件 RIFinder，并系统定量禾本科中的远程遗传渗入，提出渗入在物种适应性演化中的关键作用。"
 authors: ["Yujie Huang", "Co-authors", "Longjiang Fan"]
 publication: "Plant Communications"
 publication_short: "Plant Commun"
-publish_date: ""
-year: 2025
-doi: ""
+publish_date: "2026-02-09"
+year: 2026
+doi: "10.1016/j.xplc.2025.101658"
 pdf: ""
 code: "https://github.com/Ne0tea/RIFinder"
 bibtex: ""
@@ -33,4 +33,4 @@ Remote introgression is an important source of adaptive evolution, yet robust an
 ## Links
 
 - Code: <https://github.com/Ne0tea/RIFinder>
-- DOI: *TBD*
+- DOI: "10.1016/j.xplc.2025.101658"

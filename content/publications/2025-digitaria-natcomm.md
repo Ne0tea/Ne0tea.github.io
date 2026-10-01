@@ -1,15 +1,15 @@
 ---
 title: "Digitaria genome analyses indicate introgression may drive local adaptation and herbicide resistance"
-date: 2025-01-01
-lastmod: 2025-01-01
+date: 2026-02-12
+lastmod: 2026-02-12
 draft: false
 summary: "新组装马唐(Digitaria sanguinalis)及其祖先基因组，结合 579 个全国采样材料，揭示杂草马唐的优异环境适应性的基因组基础及其除草剂抗性的渗入来源。"
 authors: ["Yujie Huang", "Co-authors", "Longjiang Fan"]
 publication: "Nature Communications"
 publication_short: "Nat Commun"
-publish_date: ""
-year: 2025
-doi: ""
+publish_date: "2026-02-12"
+year: 2026
+doi: "10.1038/s41467-026-69076-x"
 pdf: ""
 code: ""
 bibtex: ""
@@ -32,4 +32,4 @@ author_note: "First author"
 
 ## Links
 
-- DOI: *TBD*
+- DOI: "10.1038/s41467-026-69076-x"

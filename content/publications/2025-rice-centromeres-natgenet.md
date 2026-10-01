@@ -1,15 +1,15 @@
 ---
 title: "Genetic diversity and evolution of rice centromeres"
-date: 2025-01-01
-lastmod: 2025-01-01
+date: 2025-10-21
+lastmod: 2025-10-21
 draft: false
 summary: "组装了 67 个水稻基因组和超过 800 个完整着丝粒，定量水稻着丝粒局部均一化与多层嵌套结构，报道其结构变异与转座子驱动的遗传创新，提出水稻着丝粒演化新模型 RICE。"
 authors: ["Yujie Huang", "Co-first authors", "...", "Longjiang Fan", "Qian Qian"]
 publication: "Nature Genetics"
 publication_short: "Nat Genet"
-publish_date: ""
+publish_date: "2025-10-21"
 year: 2025
-doi: ""
+doi: "10.1038/s41588-025-02365-1"
 pdf: ""
 code: ""
 bibtex: ""
@@ -32,4 +32,4 @@ Centromeres are pivotal chromosomal regions whose repetitive nature has long hin
 
 ## Links
 
-- DOI: *待补充*
+- DOI: "10.1038/s41588-025-02365-1"
